@@ -1,0 +1,11 @@
+Module,SubModule,ScenarioID,ScenarioDescription,TestCaseID,TestCaseDescription
+Electronics menu,Mobile,AUTO_TS_01,Print Electronics menu and its sub-menu,AUTO-TC-001,"
+Kindly follow below steps :
+● Go to Flipkart website ‘https://www.flipkart.com/’
+● You will get a login pop-up.
+● No need to login and click on the close icon and cancel the login pop-up
+● Now you will see some banners, and it will change randomly.
+● Click on any banner
+● Click on any banner, and you will see a horizontal menu with ‘Electronics’.
+● Hover on it, and you will see a list of mobile brands.
+● Need to print all the mobile brands as per below format on console : "
