@@ -22,6 +22,11 @@ public class AUTO_TS_01_DataOrb_Automation_Assignment extends TestSetup {
         homePage.clickOnBanner();
         homePage.hoverOnElectronicsDropDown();
         System.out.println(homePage.getAllMobileList());
+        Assert.assertEquals(homePage.getAllMobileListSize(),18);
+        System.out.println("==============================================================");
+        System.out.println(homePage.getAllMobileAccessoriesList());
+        homePage.hoverOnElectronicsDropDown();
+        Assert.assertEquals(homePage.getAllMobileAccessoriesListSize(),17);
     }
 
 }

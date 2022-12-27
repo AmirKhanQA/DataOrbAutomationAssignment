@@ -3,7 +3,6 @@ package orb.data.web.carina.automation.gui.pages;
 import java.lang.invoke.MethodHandles;
 import java.util.List;
 
-import com.qaprosoft.carina.core.foundation.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,6 +29,17 @@ public class HomePage extends AbstractPage {
 
     @FindBy(xpath = "(//a[contains(text(),'Mi')])[1]/..")
     private ExtendedWebElement ListOfMobilePhone;
+
+    @FindBy(xpath = "(//a[contains(text(),'Mi')])[1]/../a")
+    private List<ExtendedWebElement> mobilePhone;
+
+
+    @FindBy(xpath = "(//a[contains(text(),'Mobile Cases')])[1]/..")
+    private ExtendedWebElement ListOfMobileAccessories;
+
+    @FindBy(xpath = "(//a[contains(text(),'Mobile Cases')])[1]/../a")
+    private List<ExtendedWebElement> mobilePhoneAccessories;
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -58,5 +68,23 @@ public class HomePage extends AbstractPage {
     {
         return ListOfMobilePhone.getText();
     }
+
+    public int getAllMobileListSize()
+    {
+        System.out.println("Size of the MobileList is--> "+mobilePhone.size());
+        return mobilePhone.size();
+    }
+
+    public String getAllMobileAccessoriesList()
+    {
+        return ListOfMobileAccessories.getText();
+    }
+
+    public int getAllMobileAccessoriesListSize()
+    {
+        System.out.println("Size of the Mobile Accessories List is--> "+mobilePhoneAccessories.size());
+        return mobilePhoneAccessories.size();
+    }
+
 
 }
